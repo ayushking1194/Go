@@ -1,0 +1,40 @@
+Steps to Run a Simple Go Program in VS Code on macOS
+-----------------------------------------------------
+
+1. Open Terminal and check Go installation:
+   $ go version
+
+2. Open VS Code and create a new folder for your project:
+   Example: hello-go
+
+3. Open that folder in VS Code:
+   File > Open Folder > Select your folder
+
+4. Create a new file named main.go with the following content:
+
+   package main
+
+   import "fmt"
+
+   func main() {
+       fmt.Println("Hello, Go!")
+   }
+
+5. Open Terminal inside VS Code:
+   - Shortcut: Ctrl + ` (backtick) or View > Terminal
+
+6. Initialize the Go module (only once per project):
+   $ go mod init hello-go
+
+7. Run the Go program:
+   $ go run main.go
+
+Optional:
+- To compile and run:
+   $ go build main.go
+   $ ./main
+
+Note:
+- If VS Code asks to install Go tools (gopls, gofmt, etc.), click "Install All".
+- You can also use the "Code Runner" extension to run the code with a right-click > Run Code.
+
