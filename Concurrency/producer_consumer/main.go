@@ -24,11 +24,8 @@ func consumer(id int, jobs <-chan int, wg *sync.WaitGroup) {
 	}
 }
 // Backpressure:
-// If consumers process jobs slower than producers send them,
-// the channel buffer eventually fills up.
-// Once the buffer is full, producers block on send (jobs <- x).
-// This automatically slows down producers and prevents
-// unbounded memory usage or system overload.
+// If consumers process jobs slower than producers send them, the channel buffer eventually fills up. Once the buffer is full, producers block on send (jobs <- x). 
+// This automatically slows down producers and prevents unbounded memory usage or system overload.
 
 func main() {
 	jobs := make(chan int, 3) // buffered channel
